@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Minesweeper Game</title>
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="screen" id="startScreen">
+    <h1>Minesweeper</h1>
+    <div id="instructions">
+        <select id="difficulty">
+            <option value="1">Beginner</option>
+            <option value="2">Intermediate</option>
+            <option value="3">Expert</option>
+        </select>
+        <button id="playButton">Play</button>
+    </div>
+</div>
+
+<div class="screen hidden" id="gameScreen">
+    <div id="gameStatus"></div>
+    <div id="gameBoard">
+        <canvas id="gameCanvas"></canvas>
+        <div id="controls">
+            <button id="restartButton">Restart</button>
+            <button id="newLevelButton">Select New Level</button>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal hidden" id="gameOverModal">
+    <div class="modal-content">
+        <p class="close" id="closeGameOverModal">&times;</p>
+        <div id="gameInfo">
+            <h2 id="gameOverHeader"></h2>
+            <p id="gameOverMessage"></p>
+            <p id="gameOverTime"></p>
+            <button id="newGameButton">New Game</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/Main.js" type="module"></script>
+</body>
+</html>
