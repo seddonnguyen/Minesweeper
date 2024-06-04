@@ -182,11 +182,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 board.revealMines();
                 drawBoard();
                 playSound(sounds.explosion);
-                setTimeout(() => displayGameOverModal("Game Over!", "You hit a mine."), 2000);
+                setTimeout(() => displayGameOverModal("Game Over!", "You hit a mine."), 500);
             } else if (board.allOpened) {
                 endGame();
                 playSound(sounds.victory);
-                setTimeout(() => displayGameOverModal("Congratulations!", "You've cleared the minefield."), 1500);
+                setTimeout(() => displayGameOverModal("Congratulations!", "You've cleared the minefield."), 500);
             }
         }
     }
