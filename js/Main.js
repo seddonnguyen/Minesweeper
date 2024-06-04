@@ -1,7 +1,20 @@
-// Main.js
 import Difficulty from './Difficulty.js';
 import Board from './Board.js';
 import { drawImage } from './DrawImage.js';
+import '../css/styles.css';
+
+// Import images
+import mineSrc from '../images/mine.svg';
+import flagSrc from '../images/flag.svg';
+import invalidSrc from '../images/invalid.svg';
+
+// Import sounds
+import explosionSrc from '../sounds/explosion.mp3';
+import victorySrc from '../sounds/victory.mp3';
+import flagSoundSrc from '../sounds/flag.mp3';
+import openSrc from '../sounds/open.mp3';
+import selectSrc from '../sounds/select.mp3';
+import closeSrc from '../sounds/close.mp3';
 
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('gameCanvas');
@@ -23,9 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const flagImg = new Image();
     const invalidImg = new Image();
 
-    mineImg.src = './images/mine.svg';
-    flagImg.src = './images/flag.svg';
-    invalidImg.src = './images/invalid.svg';
+    mineImg.src = mineSrc;
+    flagImg.src = flagSrc;
+    invalidImg.src = invalidSrc;
 
     let board;
     let cellSize;
@@ -40,53 +53,75 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadSound = (url) => {
         return fetch(url)
             .then(response => response.arrayBuffer())
-            .then(data => audioContext.decodeAudioData(data));
+            .then(data => audioContext.decodeAudioData(data))
+            .catch(error => console.error(`Error loading sound ${url}:`, error)); // Added error handling
     };
 
     const playSound = (buffer) => {
-        const source = audioContext.createBufferSource();
-        source.buffer = buffer;
-        source.connect(audioContext.destination);
-        source.start(0);
+        if (!buffer) {
+            console.error("Sound buffer is null or undefined");
+            return;
+        }
+        audioContext.resume().then(() => {
+            const source = audioContext.createBufferSource();
+            source.buffer = buffer;
+            source.connect(audioContext.destination);
+            source.start(0);
+        }).catch(error => console.error("Error resuming audio context:", error)); // Added error handling
     };
 
     const initSounds = async () => {
-        sounds.explosion = await loadSound('sounds/explosion.mp3');
-        sounds.victory = await loadSound('sounds/victory.mp3');
-        sounds.flag = await loadSound('sounds/flag.mp3');
-        sounds.open = await loadSound('sounds/open.mp3');
-        sounds.select = await loadSound('sounds/select.mp3');
-        sounds.close = await loadSound('sounds/close.mp3');
+        try {
+            sounds.explosion = await loadSound(explosionSrc);
+            sounds.victory = await loadSound(victorySrc);
+            sounds.flag = await loadSound(flagSoundSrc);
+            sounds.open = await loadSound(openSrc);
+            sounds.select = await loadSound(selectSrc);
+            sounds.close = await loadSound(closeSrc);
+            console.log("Sounds loaded successfully"); // Added log for successful loading
+        } catch (error) {
+            console.error("Error initializing sounds:", error); // Added error handling
+        }
     };
 
     initSounds();
 
     playButton.addEventListener('click', () => {
-        playSound(sounds.select);
-        startGame();
+        audioContext.resume().then(() => { // Ensure audio context is resumed on user interaction
+            playSound(sounds.select);
+            startGame();
+        }).catch(error => console.error("Error resuming audio context on play button:", error));
     });
 
     closeGameOverModal.addEventListener('click', () => {
-        playSound(sounds.close);
-        gameOverModal.classList.add('hidden');
+        audioContext.resume().then(() => {
+            playSound(sounds.close);
+            gameOverModal.classList.add('hidden');
+        }).catch(error => console.error("Error resuming audio context on close modal:", error));
     });
 
     newGameButton.addEventListener('click', () => {
-        playSound(sounds.select);
-        gameOverModal.classList.add('hidden');
-        startScreen.classList.remove('hidden');
-        gameScreen.classList.add('hidden');
+        audioContext.resume().then(() => {
+            playSound(sounds.select);
+            gameOverModal.classList.add('hidden');
+            startScreen.classList.remove('hidden');
+            gameScreen.classList.add('hidden');
+        }).catch(error => console.error("Error resuming audio context on new game button:", error));
     });
 
     restartButton.addEventListener('click', () => {
-        playSound(sounds.select);
-        startGame();
+        audioContext.resume().then(() => {
+            playSound(sounds.select);
+            startGame();
+        }).catch(error => console.error("Error resuming audio context on restart button:", error));
     });
 
     newLevelButton.addEventListener('click', () => {
-        playSound(sounds.select);
-        gameScreen.classList.add('hidden');
-        startScreen.classList.remove('hidden');
+        audioContext.resume().then(() => {
+            playSound(sounds.select);
+            gameScreen.classList.add('hidden');
+            startScreen.classList.remove('hidden');
+        }).catch(error => console.error("Error resuming audio context on new level button:", error));
     });
 
     function startGame() {
@@ -129,10 +164,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const col = Math.floor(offsetX / cellSize);
 
         if (board && board.isValidPosition(row, col)) {
-            if (board.getCell(row, col).isOpened || board.getCell(row, col).isFlagged) { return; }
+            if (board.getCell(row, col).isOpened || board.getCell(row, col).isFlagged) {
+                return;
+            }
             playSound(sounds.open);
 
-            if (board.opened === 0) { board.initMines(row, col); }
+            if (board.opened === 0) {
+                board.initMines(row, col);
+            }
 
             board.openCell(row, col);
             updateGameStatus();
@@ -143,18 +182,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 board.revealMines();
                 drawBoard();
                 playSound(sounds.explosion);
-                setTimeout(() => displayGameOverModal("Game Over!", "You hit a mine."), 500);
+                setTimeout(() => displayGameOverModal("Game Over!", "You hit a mine."), 2000);
             } else if (board.allOpened) {
                 endGame();
                 playSound(sounds.victory);
-                setTimeout(() => displayGameOverModal("Congratulations!", "You've cleared the minefield."), 500);
+                setTimeout(() => displayGameOverModal("Congratulations!", "You've cleared the minefield."), 1500);
             }
         }
     }
 
     function handleCanvasRightClick(event) {
         event.preventDefault();
-        if (board.opened === 0) { return; }
+        if (board.opened === 0) {
+            return;
+        }
         const {
                   offsetX,
                   offsetY
@@ -172,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function drawBoard() {
         context.clearRect(0, 0, canvas.width, canvas.height);
-        context.font = `${ cellSize / 2 }px 'Roboto'`;
+        context.font = `${cellSize / 2}px 'Roboto'`;
         context.textAlign = 'center';
         context.textBaseline = 'middle';
 
@@ -237,10 +278,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateGameStatus() {
         elapsedTimeString = getElapsedTime();
         gameStatus.innerHTML = `
-            <div>Cells Opened: ${ board.opened }</div>
-            <div>Flags Placed: ${ board.flags }</div>
-            <div>Mines Remaining: ${ board.mines - board.flags }</div>
-            <div>Elapsed Time: ${ elapsedTimeString }</div>
+            <div>Cells Opened: ${board.opened}</div>
+            <div>Flags Placed: ${board.flags}</div>
+            <div>Mines Remaining: ${board.mines - board.flags}</div>
+            <div>Elapsed Time: ${elapsedTimeString}</div>
         `;
     }
 
@@ -250,9 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const minutes = Math.floor(totalSeconds / 60);
         const seconds = totalSeconds % 60;
 
-        return `${ minutes.toString()
-                          .padStart(2, '0') }:${ seconds.toString()
-                                                        .padStart(2, '0') }`;
+        return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
     }
 
     function startTimer() {
@@ -267,7 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayGameOverModal(header, message) {
         gameOverHeader.textContent = header;
         gameOverMessage.textContent = message;
-        gameOverTime.textContent = `Time: ${ elapsedTimeString }`;
+        gameOverTime.textContent = `Time: ${elapsedTimeString}`;
         gameOverModal.classList.remove('hidden');
     }
 

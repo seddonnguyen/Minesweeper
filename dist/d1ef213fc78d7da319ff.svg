@@ -1,0 +1,52 @@
+<svg width="100" height="100" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Outer Circle -->
+    <circle cx="12" cy="12" r="8" fill="none" stroke="#34495e" stroke-width="2">
+        <animate attributeName="r" values="7.5;8.5;7.5" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Central Core -->
+    <circle cx="12" cy="12" r="4" fill="#ff4136" stroke="#c0392b" stroke-width="2">
+        <animate attributeName="r" values="3.5;4.5;3.5" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Rotating Spikes -->
+    <g transform="rotate(0 12 12)">
+        <polygon points="12,0 14,6 10,6" fill="#2c3e50">
+            <animateTransform attributeName="transform" type="rotate" values="0 12 12;360 12 12" dur="3s"
+                              repeatCount="indefinite"/>
+        </polygon>
+        <polygon points="12,24 14,18 10,18" fill="#2c3e50">
+            <animateTransform attributeName="transform" type="rotate" values="0 12 12;360 12 12" dur="3s"
+                              repeatCount="indefinite"/>
+        </polygon>
+        <polygon points="0,12 6,14 6,10" fill="#2c3e50">
+            <animateTransform attributeName="transform" type="rotate" values="0 12 12;360 12 12" dur="3s"
+                              repeatCount="indefinite"/>
+        </polygon>
+        <polygon points="24,12 18,14 18,10" fill="#2c3e50">
+            <animateTransform attributeName="transform" type="rotate" values="0 12 12;360 12 12" dur="3s"
+                              repeatCount="indefinite"/>
+        </polygon>
+        <polygon points="4.5,4.5 7,7 6,4" fill="#2c3e50">
+            <animateTransform attributeName="transform" type="rotate" values="0 12 12;360 12 12" dur="3s"
+                              repeatCount="indefinite"/>
+        </polygon>
+        <polygon points="19.5,19.5 18,17 21,18" fill="#2c3e50">
+            <animateTransform attributeName="transform" type="rotate" values="0 12 12;360 12 12" dur="3s"
+                              repeatCount="indefinite"/>
+        </polygon>
+        <polygon points="4.5,19.5 7,17 6,20" fill="#2c3e50">
+            <animateTransform attributeName="transform" type="rotate" values="0 12 12;360 12 12" dur="3s"
+                              repeatCount="indefinite"/>
+        </polygon>
+        <polygon points="19.5,4.5 18,7 21,6" fill="#2c3e50">
+            <animateTransform attributeName="transform" type="rotate" values="0 12 12;360 12 12" dur="3s"
+                              repeatCount="indefinite"/>
+        </polygon>
+    </g>
+
+    <!-- Inner Pulse -->
+    <circle cx="12" cy="12" r="2" fill="#e74c3c">
+        <animate attributeName="r" values="2;2.5;2" dur="1s" repeatCount="indefinite"/>
+    </circle>
+</svg>
