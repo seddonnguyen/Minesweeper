@@ -67,7 +67,7 @@ We welcome contributions to enhance the Minesweeper game! Whether it's bug fixes
 6. **Create a Pull Request**: Submit a pull request to the main repository for review.
 
 ## License
-This project is licensed under the MIT License, making it free to use and modify. See the [LICENSE](https://github.com/seddonnguyen/minesweeper/LICENSE.txt) file for details.
+This project is licensed under the MIT License, making it free to use and modify. See the [LICENSE](https://github.com/seddonnguyen/minesweeper/LICENSE) file for details.
 
 ## Contact
 Your engagement is important to us. Feel free to contact me with any questions or feedback by opening an issue on the repository. Your input is highly valued.
