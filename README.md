@@ -3,11 +3,11 @@ Experience the classic Minesweeper game in a whole new way! This repository feat
 
 ## Features
 - **Interactive Design**: Tailored for desktops, tablets, and smartphones, providing a seamless experience across all devices.
-- **Personalized Difficulty**: Choose from a range of difficulty options, allowing you to modify the grid size and number of mines to match your expertise.
+- **Personalized Your Challenge**: Tailor your challenge by choosing your preferred difficulty level. Whether you're a beginner or a Minesweeper pro, select the game that matches your skill level and get ready for an exciting adventure!
 - **Immersive Sound Effects**: Engaging audio effects intensify the experience, adding excitement to every move.
 - **Intuitive User Interface**: Thoughtfully designed for effortless navigation and delightful gameplay.
 
-## Built with:
+## Built with
   - [![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=flat&logo=javascript&logoColor=black)](https://www.javascript.com/)
   - [![Node.js](https://img.shields.io/badge/Node.js-%23339933.svg?style=flat&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
   - [![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
