@@ -1,6 +1,4 @@
 # Minesweeper
-
-## Overview
 Experience the classic Minesweeper game in a whole new way! This repository features a web-based version of Minesweeper that has been revamped using modern web technologies to provide an immersive and captivating gaming experience. Delve into a world of strategy and chance, all within the convenience of your web browser.
 
 ## Features
