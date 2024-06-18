@@ -1,14 +1,13 @@
-```markdown
 # Minesweeper Game
 
 ## Overview
-Welcome to the Minesweeper Game project! This repository hosts a web-based version of the classic Minesweeper game, reimagined with modern web technologies for a seamless and engaging experience. Dive into a world of strategy and luck, right in your browser!
+Experience the classic Minesweeper game in a whole new way! This repository features a web-based version of Minesweeper that has been revamped using modern web technologies to provide an immersive and captivating gaming experience. Delve into a world of strategy and chance, all within the convenience of your web browser.
 
 ## Features
-- **Responsive Design**: Optimized for desktops, tablets, and smartphones, providing a consistent experience across all devices.
-- **Customizable Difficulty**: Choose from multiple difficulty levels, adjusting the grid size and the number of mines to match your skill.
-- **Engaging Sound Effects**: Sound effects enhance the immersion, making every click exciting.
-- **User-Friendly Interface**: Intuitive design ensures easy navigation and enjoyable gameplay.
+- **Interactive Design**: Tailored for desktops, tablets, and smartphones, providing a seamless experience across all devices.
+- **Personalized Difficulty**: Choose from a range of difficulty options, allowing you to modify the grid size and number of mines to match your expertise.
+- **Immersive Sound Effects**: Engaging audio effects intensify the experience, adding excitement to every move.
+- **Intuitive User Interface**: Thoughtfully designed for effortless navigation and delightful gameplay.
 
 ## Installation
 To play the Minesweeper game on your local machine, follow these steps:
@@ -34,21 +33,19 @@ To play the Minesweeper game on your local machine, follow these steps:
    Simply open `index.html` in your preferred web browser.
 
 ## Usage
-Playing Minesweeper is simple:
+In Minesweeper, the game is simple and consists of the following actions:
 
-- **Reveal Tiles**: Click on a tile to reveal it.
-- **Flag Mines**: Right-click to flag a tile as a mine, helping you keep track of potential dangers.
-- **Winning the Game**: Successfully reveal all non-mine tiles to win.
-- **Losing the Game**: Clicking on a mine ends the game. Be careful!
+- **Revealing Tiles**: You can reveal a tile by clicking on it, which will uncover what lies beneath.
+- **Flagging Mines**: To help you keep track of potential dangers, you can right-click to flag a tile as a mine.
+- **Winning the Game**: Your goal is to successfully reveal all non-mine tiles in order to win the game.
+- **Losing the Game**: Be cautious, as clicking on a mine will end the game.
 
 ## How to Play
-1. **Start the Game**: Open the `index.html` file to load the game.
-2. **Select Difficulty**: Choose your preferred difficulty level from the menu.
-3. **Gameplay**: Click tiles to reveal them. Use right-click to flag suspected mines.
-4. **End Game**: The game ends when all safe tiles are revealed or a mine is clicked.
-
-## Play Online
-No need to download anything! You can play the game directly online: [Play Minesweeper Online](https://seddonnguyen.github.io/minesweeper/)
+Ready to dive into the world of Minesweeper? Here's your guide:
+1. **Start the Adventure**: Open the index.html file to embark on the journey, or hop online to play at [Minesweeper](https://seddonnguyen.github.io/minesweeper/).
+2. **Choose Your Challenge**: Select your preferred difficulty level—easy, medium, or hard— and get ready for an exhilarating experience.
+3. **Uncover the Board**: Click on the tiles to reveal the hidden treasures beneath. Use the right-click function to flag potential mines and exercise your strategic skills.
+4. **Game On**: The adventure concludes when you've uncovered all safe tiles or encountered a mine. Stay sharp and navigate the board wisely to emerge victorious!
 
 ## Contributing
 We welcome contributions to enhance the Minesweeper game! Whether it's bug fixes, new features, or improvements, your contributions are valuable. Here’s how you can contribute:
@@ -70,12 +67,9 @@ We welcome contributions to enhance the Minesweeper game! Whether it's bug fixes
 6. **Create a Pull Request**: Submit a pull request to the main repository for review.
 
 ## License
-This project is licensed under the MIT License, making it free to use and modify. See the [LICENSE](https://github.com/seddonnguyen/minesweeper/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License, making it free to use and modify. See the [LICENSE](https://github.com/seddonnguyen/minesweeper/LICENSE.txt) file for details.
 
 ## Contact
-Have questions or feedback? Feel free to open an issue on the repository or contact the project owner. We appreciate your input and are here to help!
-
-For more details, visit the [Minesweeper GitHub repository](https://github.com/seddonnguyen/minesweeper).
+Your engagement is important to us. Feel free to contact me with any questions or feedback by opening an issue on the repository. Your input is highly valued.
 
 Enjoy playing Minesweeper and happy coding!
-```
