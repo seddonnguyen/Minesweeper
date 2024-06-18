@@ -9,9 +9,16 @@ Experience the classic Minesweeper game in a whole new way! This repository feat
 - **Immersive Sound Effects**: Engaging audio effects intensify the experience, adding excitement to every move.
 - **Intuitive User Interface**: Thoughtfully designed for effortless navigation and delightful gameplay.
 
+## Built with:
+- **Languages & Frameworks**:
+  - [![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=flat&logo=javascript&logoColor=black)](https://www.javascript.com/)
+  - [![Node.js](https://img.shields.io/badge/Node.js-%23339933.svg?style=flat&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+- **Web Technologies:** 
+  - [![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+  - [![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
 ## Installation
 To play the Minesweeper game on your local machine, follow these steps:
-
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/seddonnguyen/minesweeper.git
@@ -46,6 +53,12 @@ Ready to dive into the world of Minesweeper? Here's your guide:
 2. **Choose Your Challenge**: Select your preferred difficulty level—easy, medium, or hard— and get ready for an exhilarating experience.
 3. **Uncover the Board**: Click on the tiles to reveal the hidden treasures beneath. Use the right-click function to flag potential mines and exercise your strategic skills.
 4. **Game On**: The adventure concludes when you've uncovered all safe tiles or encountered a mine. Stay sharp and navigate the board wisely to emerge victorious!
+
+## Gameplay Tips
+Here are some pro tips to take your game to the next level:
+- **Plan Like a Pro**: Put those numbers to work! Use them to strategically deduce where the sneaky mines might be hiding.
+- **Flag 'Em Down**: Channel your inner detective and mark potential mines with a slick right-click. This move will keep you from accidentally setting off an explosion!
+- **Play it Safe**: Want to uncover those safe zones? Start with the corners or edges for a better shot at revealing larger safe areas. You've got this!
 
 ## Contributing
 We welcome contributions to enhance the Minesweeper game! Whether it's bug fixes, new features, or improvements, your contributions are valuable. Here’s how you can contribute:
