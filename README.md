@@ -1,3 +1,4 @@
+```markdown
 # Minesweeper Game
 
 ## Overview
@@ -16,6 +17,7 @@ To play the Minesweeper game on your local machine, follow these steps:
    ```bash
    git clone https://github.com/seddonnguyen/minesweeper.git
    ```
+   Or [download the ZIP file](https://github.com/seddonnguyen/minesweeper/archive/refs/heads/main.zip).
 2. **Navigate to the project directory**:
    ```bash
    cd minesweeper
@@ -46,7 +48,7 @@ Playing Minesweeper is simple:
 4. **End Game**: The game ends when all safe tiles are revealed or a mine is clicked.
 
 ## Play Online
-No need to download anything! You can play the game directly online: [Play Minesweeper Online](https://seddonnguyen.github.io/minesweeper/){:target="_blank"}
+No need to download anything! You can play the game directly online: [Play Minesweeper Online](https://seddonnguyen.github.io/minesweeper/)
 
 ## Contributing
 We welcome contributions to enhance the Minesweeper game! Whether it's bug fixes, new features, or improvements, your contributions are valuable. Here’s how you can contribute:
@@ -68,11 +70,12 @@ We welcome contributions to enhance the Minesweeper game! Whether it's bug fixes
 6. **Create a Pull Request**: Submit a pull request to the main repository for review.
 
 ## License
-This project is licensed under the MIT License, making it free to use and modify. See the [LICENSE](https://github.com/seddonnguyen/minesweeper/blob/main/LICENSE){:target="_blank"} file for details.
+This project is licensed under the MIT License, making it free to use and modify. See the [LICENSE](https://github.com/seddonnguyen/minesweeper/blob/main/LICENSE) file for details.
 
 ## Contact
 Have questions or feedback? Feel free to open an issue on the repository or contact the project owner. We appreciate your input and are here to help!
 
-For more details, visit the [Minesweeper GitHub repository](https://github.com/seddonnguyen/minesweeper){:target="_blank"}.
+For more details, visit the [Minesweeper GitHub repository](https://github.com/seddonnguyen/minesweeper).
 
 Enjoy playing Minesweeper and happy coding!
+```
