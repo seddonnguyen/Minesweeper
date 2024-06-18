@@ -10,10 +10,8 @@ Experience the classic Minesweeper game in a whole new way! This repository feat
 - **Intuitive User Interface**: Thoughtfully designed for effortless navigation and delightful gameplay.
 
 ## Built with:
-- **Languages & Frameworks**:
   - [![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=flat&logo=javascript&logoColor=black)](https://www.javascript.com/)
   - [![Node.js](https://img.shields.io/badge/Node.js-%23339933.svg?style=flat&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
-- **Web Technologies:** 
   - [![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
   - [![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
